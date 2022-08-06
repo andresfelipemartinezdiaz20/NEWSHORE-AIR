@@ -1,0 +1,130 @@
+$gray : #485871;
+$white: #fff; 
+$red: #ff0000;
+
+.banner{
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.content{
+    max-width: 1440px;
+    margin: 30px auto;
+    padding: 15px;
+
+    h1{
+        margin: 40px auto;
+        text-align: center;
+    }
+
+    .icono{
+        display: flex;
+        width: 100%;
+
+        &:after,
+        &:before{
+            width: 100%;
+            margin: auto 0;
+            content: '';
+            display: block;
+            background: $red;
+            height: 2px;
+
+        }
+    }
+
+    .info{
+        width: 200px;
+        padding: 15px;     
+        background: $gray;
+        color: $white;
+        font-size: 16px;
+        text-align: center;
+
+        span{
+            font-weight: bold;
+        }
+    }
+
+    .rows{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .row{
+        box-shadow: 0px 25px 46px -1px rgba(0,0,0,0.38);
+        width: calc(50% - 45px);
+        margin: 30px 0;
+        display: flex;
+
+        img{
+            min-width: 40px;
+            height: auto;
+            margin: auto;
+            max-width: 40px;
+        }
+
+
+        &-header{
+            display: flex;
+            width: 100%;
+
+            &-origen,
+            &-destino{
+                padding: 15px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                height: 82px;
+                margin: auto;
+
+                p{
+                    font-size: 20px;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+
+
+    @media(max-width: 900px){
+        .row{
+            width: 100%;
+        }
+    }
+
+    //formulario iputs
+    form{
+
+        label{
+            width: 100%;
+            font-weight: bold;
+            display: block;
+            margin: 0 0 15px;
+        }
+
+        input{
+            padding: 10px;
+            margin: 0 15px 0 0;
+        }
+
+    }
+
+    //no hay resultados
+    h1.no-result{
+        font-weight: 500;
+        text-align: left;
+    }
+}

@@ -1,0 +1,40 @@
+<div class="banner"><img src="https://img.freepik.com/vector-premium/banner-agencia-vacaciones-viajes-resort-reserva-boletos-avion-o-aventura-playa-verano_101884-1536.jpg?w=1800"></div>
+<div class="content">
+
+    
+
+    <h1>LISTADO DE VUELOS!</h1>
+
+    <form class="actions">
+        <label>Buscar vuelo</label>
+        <input type="text" class=" form-control" placeholder="Origen..." name="filterPost" [(ngModel)]="filterPost" maxlength="3">
+        <input type="text" class=" form-control" placeholder="Destino..." name="filterdestination" [(ngModel)]="filterdestination" maxlength="3">
+    </form>
+
+    <div class="rows" >
+           
+
+
+
+            <ng-container *ngIf="( vuelos | origin:filterPost | destination:filterdestination) as vuelos">
+                <div class="row" *ngFor=" let item of vuelos | origin:filterPost | destination:filterdestination">
+
+                    <div class="row-header">
+                        <div class="row-header-origen"><span>Origen</span><p>{{ item.departureStation }}</p></div>
+                        <div class="icono"><img src="https://png.pngtree.com/png-vector/20191016/ourlarge/pngtree-public-transport-airplane-vector-thin-line-icon-png-image_1804131.jpg"></div>
+                        <div class="row-header-destino"><span>Destino</span><p>{{ item.arrivalStation }}</p></div>
+                    </div>
+                    <div class="info">
+                        <div class="number"><span>Vuelo</span><p>#{{item.flightNumber}}</p></div>
+                        <div class="price"><span>Precio</span><p>{{item.price | currencyChange}}</p></div>
+                    </div>
+                </div>
+
+               
+               
+                <h2 class="no-result" *ngIf="vuelos.length === 0">No se encontraron vuelos...</h2>
+            </ng-container>
+               
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+$blue : #3681f7;
+$white: #fff;
+
+select,
+option{
+    cursor: pointer;
+}
+
+.header{
+    display: flex;
+    padding: 15px;
+    background: $blue;
+
+    .right{
+        margin: 0 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        flex-wrap: wrap;
+
+        span{
+            width: 100%;
+            text-align: right;
+            font-size: 16px;         
+            font-weight: bold;   
+            line-height: 18px;
+            color: $white;
+        }
+    }
+
+    .left{
+        margin: 0 auto 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        
+        span{
+            
+            margin: auto 0;
+            font-size: 16px;         
+            font-weight: bold;  
+            line-height: 18px;
+            color: $white;
+        }
+    }
+}
