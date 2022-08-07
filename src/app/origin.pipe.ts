@@ -15,6 +15,10 @@ export class OriginPipe implements PipeTransform {
       if(post.departureStation.toLowerCase().indexOf(arg)  > -1){
         resultPost.push(post);
       }
+      
+      if(post.departureStation.indexOf(arg)  > -1){
+        resultPost.push(post);
+      }
      
     };
 

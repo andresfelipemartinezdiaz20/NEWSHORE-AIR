@@ -13,6 +13,10 @@ export class DestinationPipe implements PipeTransform {
       if(destination.arrivalStation.toLowerCase().indexOf(args)  > -1) {
         resultdestination.push(destination);
       }
+      
+      if(destination.arrivalStation.indexOf(args)  > -1) {
+        resultdestination.push(destination);
+      }
      
     };
 
