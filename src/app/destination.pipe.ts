@@ -12,9 +12,7 @@ export class DestinationPipe implements PipeTransform {
     for( const destination of value){
       if(destination.arrivalStation.toLowerCase().indexOf(args)  > -1) {
         resultdestination.push(destination);
-      }
-      
-      if(destination.arrivalStation.indexOf(args)  > -1) {
+      } else if(destination.arrivalStation.indexOf(args)  > -1) {
         resultdestination.push(destination);
       }
      

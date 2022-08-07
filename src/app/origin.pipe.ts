@@ -14,9 +14,7 @@ export class OriginPipe implements PipeTransform {
     for( const post of value){
       if(post.departureStation.toLowerCase().indexOf(arg)  > -1){
         resultPost.push(post);
-      }
-      
-      if(post.departureStation.indexOf(arg)  > -1){
+      } else if(post.departureStation.indexOf(arg)  > -1){
         resultPost.push(post);
       }
      
